@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/mackz-maxw/TagExpress/issues"
   },
-  "homepage": "https://github.com/mackz-maxw/TagExpress#readme"
+  "homepage": "https://github.com/mackz-maxw/TagExpress#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongodb": "^6.11.0",
+    "mongoose": "^8.8.4",
+    "natural": "^8.0.1",
+    "rss-parser": "^3.13.0"
+  }
 }
