@@ -29,7 +29,7 @@ const getFeedById = async (req, res) => {
   try {
     const feed = await RSSFeed.findById(id);
     if (!feed) {
-      return res.status(404).json({ message: '未找到该 RSS 源' });
+      return res.status(404).json({ message: 'RSS source not found' });
     }
     res.json(feed);
   } catch (error) {
