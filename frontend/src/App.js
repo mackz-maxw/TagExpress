@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Layout } from 'antd';
+import { useTranslation } from 'react-i18next';
+import HomePage from './pages/HomePage';
+import FeedPage from './pages/FeedPage';
+import Header from './components/Header';
 
-function App() {
+const { Content } = Layout;
+
+const App = () => {
+  const { i18n } = useTranslation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Header />
+        <Content style={{ padding: '0 50px' }}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/feed/:id" element={<FeedPage />} />
+          </Routes>
+        </Content>
+      </Layout>
+    </Router>
   );
-}
+};
 
 export default App;

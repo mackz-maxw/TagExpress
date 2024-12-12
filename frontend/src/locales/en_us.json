@@ -1,0 +1,15 @@
+{
+    "welcome": "Welcome to our application!",
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "language": {
+      "select": "Select Language",
+      "en": "English",
+      "zh": "Chinese"
+    },
+    "errors": {
+      "404": "Page not found",
+      "500": "Internal server error"
+    }
+  }
